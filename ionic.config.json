@@ -1,0 +1,7 @@
+{
+  "name": "ionic-asthma-warn-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
