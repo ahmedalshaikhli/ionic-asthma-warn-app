@@ -1,0 +1,87 @@
+<ion-card  style="margin-top: 5rem" *ngFor="let item of senario" >
+  <ion-card-header>
+    <ion-row>
+      <ion-col size="8">
+        <ion-card-title class="fa-lg"  >Home Area Code {{ homeCode }}</ion-card-title>
+      </ion-col>
+      <ion-col size="4" class="ion-text-end">
+        <a  style="cursor: pointer;" (click)="goBack()" >back</a>
+      </ion-col>
+    </ion-row>
+  </ion-card-header>
+
+  <ion-card-content class="bg-general ">
+ <ion-row>
+  <ion-icon name="home" class="circle-icon "></ion-icon>
+  <span class="fa-lg" style="color: white; margin: 1rem;">
+    Your home area today is at {{ item.risk_Level_Target_Area_Code }} risk
+  </span>
+ </ion-row>
+   
+    
+
+          <ion-text color="light">
+            <p class="fa-lg">
+              {{ item.recommendations }}
+            </p>
+          </ion-text>
+  </ion-card-content>
+</ion-card>
+
+<ion-content>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col  size="6" *ngFor="let item of senario">
+        <div class="ion-text-end">
+          <h1 class="fa-lg">Risk level: {{ item.risk_Level_Target_Area_Code }}</h1>
+        </div>
+           
+      </ion-col>
+      <ion-col size="6">
+
+   <div class="mydoughnut">
+    <canvas width="120" height="120"  id="mydoughnutChart"></canvas>
+   </div>
+          
+       
+     
+      </ion-col>
+     
+    </ion-row>
+  </ion-grid>
+
+ <!-- <div class="container" >
+  <div class="row align-items-center h-100">
+    <div class="col-6 " *ngFor="let item of senario">
+      <span class="float-end my-h5 "> Risk level: <span class="fw-bold">{{ item.risk_Level_Target_Area_Code }}</span></span>
+    </div>
+    <div class="col-6">
+      <canvas  width="120" height="120" id="mydoughnutChart"></canvas>
+    </div>
+  </div>
+</div>  -->
+
+ 
+</ion-content>
+
+
+
+
+<ion-content >
+  
+    <canvas  id="myChart"></canvas>
+  
+  
+</ion-content>
+<!-- <ion-card style="margin-top: 5rem">
+  <ion-card-header>
+    <ion-card-title>Card Title</ion-card-title>
+    <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-card-content>
+    
+  </ion-card-content>
+</ion-card> -->
+

@@ -1,0 +1,45 @@
+.bg-general {
+    background-color: #931cf5 !important;
+
+  }
+
+  .circle-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #6f42c1 !important;;
+    background-color:white; /* Replace with your desired background color */
+  }
+
+  .fa-lg {
+    font-size: 1.5em; /* Change the value to adjust the size */
+  }
+
+
+  .mydoughnut{
+   width: 200px;
+   height: 200px;
+  }
+  
+
+  ion-card-header+.card-content-md {
+    padding-top: 20px;
+}
+    @media (max-width: 768px) {
+      /* Custom text size for screens smaller than 768px */
+    
+      .circle-icon {
+       
+        width: 35px;
+        height: 35px;
+    
+      }
+      .fa-lg {
+        font-size: 1em; /* Change the value to adjust the size */
+      }
+    }
+  
+  

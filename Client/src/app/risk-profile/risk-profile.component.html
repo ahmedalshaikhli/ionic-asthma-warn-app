@@ -1,0 +1,32 @@
+<div class="container px-5 my-5">
+  <form class='form-horizontals' (submit)="onFormSubmit()">
+      <div class="mb-3 ">
+          <label class="form-label" for="age">Age</label>
+          <input name="patientAge" [(ngModel)]="patientAge" class="form-control"  type="text" placeholder=""  />
+      </div>
+      <div class="mb-3">
+          <label class="form-label">Sex</label>
+          <div class="form-check">
+            <input name="patientSex" [(ngModel)]="patientSex" class="form-check-input" type="radio" id="male" value="Male">
+            <label class="form-check-label" for="male">Male</label>
+          </div>
+          <div class="form-check">
+         html   <input name="patientSex" [(ngModel)]="patientSex" class="form-check-input" type="radio" id="female" value="Female">
+            <label class="form-check-label" for="female">Female</label>
+          </div>
+        </div>
+   <div class="mb-3 ">
+          <label class="form-label" for="homeAreaCode">Home Area code</label>
+          <input name="homeCode" [(ngModel)]="homeCode" class="form-control" id="homeAreaCode" type="text" placeholder=""  />
+      
+      </div>
+      <div class="mb-3 ">
+          <label class="form-label" for="workAreaCode">Work Area code </label>
+          <input name="areaCode" [(ngModel)]="areaCode" class="form-control" id="workAreaCode" type="text" placeholder=""  />
+
+      </div> 
+      <div class="d-grid ">
+          <button class="btn btn-primary btn-lg " id="submitButton" type="submit">Submit</button>
+      </div>
+  </form>
+</div>

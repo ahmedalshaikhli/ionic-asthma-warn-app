@@ -1,0 +1,29 @@
+
+.btn-primary {
+    background-color: #6f42c1 !important;
+    border-color: #6f42c1 !important;
+    }
+
+    .form-horizontals{
+      display:block;
+      width:50%;
+      margin:0 auto;
+  }
+  .ion-padding{
+    padding-top: 50px;
+  }
+
+  @media (max-width: 768px) {
+    /* Custom text size for screens smaller than 768px */
+    .form-horizontals{
+      display:block;
+      width:100%;
+      margin:0 auto;
+  }
+    }
+
+
+    ion-content {
+     
+      --padding-top: 4rem;
+    }

@@ -1,0 +1,54 @@
+
+
+<!-- 
+    
+  <div class="container " *ngFor="let item of senario">
+    <div class="row">
+        <div class="col-8">
+            <h3 class="text-w my-h5">Home Area Code {{ homeCode }}</h3>
+        </div>
+        <div class="col-4">
+            <a  routerLink="/home/homeDetails" routerLinkActive="active" class="card-link float-end">View more</a>
+        </div>
+    </div>
+ <div class="card bg-general text-sm">
+  <div class="card-body text-light">
+    <h5 class="card-title my-h5"><i class="fas fa-home fa-lg circle-icon me-2"></i> Your home area today is at {{ item.risk_Level_Target_Area_Code }} risk</h5>
+    <h5 class="card-title ms-2 my-h5 ms-5">When in Area code {{ homeCode }}, we advise the following:</h5>
+    <ul class=" my-h5" style="list-style-type: disc;" >
+      <li>{{ item.recommendations }}</li>
+    </ul>
+  </div>
+</div>
+</div> -->
+ 
+<ion-card  style="margin-top: 5rem" *ngFor="let item of senario" >
+  <ion-card-header>
+    <ion-row>
+      <ion-col size="8">
+        <ion-card-title class="fa-lg"  >Home Area Code {{ homeCode }}</ion-card-title>
+      </ion-col>
+      <ion-col size="4" class="ion-text-end">
+     
+        <a   style="cursor: pointer;" routerLink="/home/homeDetails" routerLinkActive="active" >View more</a>
+      </ion-col>
+    </ion-row>
+  </ion-card-header>
+
+  <ion-card-content class="bg-general ">
+ <ion-row>
+  <ion-icon name="home" class="circle-icon "></ion-icon>
+  <span class="fa-lg" style="color: white; margin: 1rem;">
+    Your home area today is at {{ item.risk_Level_Target_Area_Code }} risk
+  </span>
+ </ion-row>
+   
+    
+
+          <ion-text color="light">
+            <p class="fa-lg">
+              {{ item.recommendations }}
+            </p>
+          </ion-text>
+  </ion-card-content>
+</ion-card>
