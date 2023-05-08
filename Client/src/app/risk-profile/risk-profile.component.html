@@ -1,4 +1,4 @@
-<div class="container px-5 my-5">
+<!-- <div class="container px-5 my-5">
   <form class='form-horizontals' (submit)="onFormSubmit()">
       <div class="mb-3 ">
           <label class="form-label" for="age">Age</label>
@@ -30,3 +30,41 @@
       </div>
   </form>
 </div>
+ -->
+<ion-content class="ion-padding">
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6" offset-md="3">
+        <form (ngSubmit)="onFormSubmit()">
+          <ion-item>
+            <ion-label position="floating">Age</ion-label>
+            <ion-input [(ngModel)]="patientAge" name="patientAge" type="text"></ion-input>
+          </ion-item>
+          <ion-item>
+           <!--  <ion-label>Sex</ion-label> -->
+            <ion-radio-group slot="start" [(ngModel)]="patientSex" name="patientSex">
+              <ion-item>
+                <ion-label>Male</ion-label>
+                <ion-radio slot="start" value="Male"></ion-radio>
+              </ion-item>
+              <ion-item>
+                <ion-label>Female</ion-label>
+                <ion-radio slot="start" value="Female"></ion-radio>
+              </ion-item>
+            </ion-radio-group>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Home Area code</ion-label>
+            <ion-input [(ngModel)]="homeCode" name="homeCode" type="text"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Work Area code</ion-label>
+            <ion-input [(ngModel)]="areaCode" name="areaCode" type="text"></ion-input>
+          </ion-item>
+          <ion-button expand="full" type="submit">Submit</ion-button>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
